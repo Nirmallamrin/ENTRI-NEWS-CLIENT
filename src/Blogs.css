@@ -1,0 +1,19 @@
+/* Styling for the grid container */
+.gridContainer {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust as needed */
+    grid-gap: 20px; /* Adjust the gap between grid items */
+}
+
+/* Styling for the blog image */
+.blogImage {
+    width: 100%; /* Make the image fill its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Styling for the paragraphs */
+.gridContainer p {
+    margin: 0; /* Remove default margins */
+    padding: 5px; /* Add some padding for readability */
+}

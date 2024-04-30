@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root{
+    --Grayish-blue: hsl(233, 8%, 79%);
+    --Dark-grayish-blue: hsl(236, 13%, 42%);
+    --Soft-red: hsl(5, 85%, 63%);
+    --Soft-orange: hsl(35, 77%, 62%)
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+    
+}
+body{
+    font-family: "Inter";
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    animation: 2s ease-in  SlideIn;
+}
+
+@keyframes SlideIn{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translatey(0%);
+    }
+}
+
+.links ul{
+    display: flex;
+    gap: 1rem;
+}
+
+.links ul li{
+    list-style: none;
+}
+
+.links ul li a{
+    text-decoration: none;
+    color: var(--Dark-grayish-blue);
+    transition: 0.5s color ease;
+}
+
+.links ul li a:hover{
+   color: var(--Soft-red);
+}
+
+.hero{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap:3rem;
+}
+
+.hero_description{
+    animation: 2s ease-in Slides;
+}
+@keyframes Slides{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+.new_articles {
+    background-color:hsl(240, 100%, 5%) ;
+    font-family: 'Inter', sans-serif;
+    color: hsl(36, 100%, 99%);
+    padding: 1em;
+    animation: 2s ease-in Slide;
+  }
+
+@keyframes Slide{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+.heading {
+    font-size:2.5em ;
+    margin-top: 7px;
+    margin-left: 7px;
+    color:var(--Soft-orange) ;
+  }
+
+
+.article {margin: 25px 4px;}
+
+.article a{
+    color: hsl(36, 100%, 99%);
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: inline-block; 
+}
+
+.article a:hover{
+    color:var(--Soft-orange) ;
+    transition: 0.5s color ease;
+}
+
+.hero_text{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.hero_text h1{
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.button {
+    background-color:hsl(5, 85%, 63%) ;
+    padding: 1em 1.5em;
+    display: inline-block;
+    margin-top: 1.5em;
+    text-decoration: none;
+    color: hsl(36, 100%, 99%) ;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+   
+}
+
+.articles{
+    display: flex;
+    gap: 1rem;
+    margin: 4rem 0;
+    
+}
+
+
+.new_article{
+    display: flex;
+    gap: 1rem;    
+}
+
+.new_article h3{
+    cursor: pointer;
+    transition: 0.5s color ease;
+}
+.new_article h3:hover{
+    color: var(--Soft-red);
+}
+
+
+.new_article .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.new_article img{
+    max-width:120px;
+}
+.content h2 {
+    color: hsl(233, 8%, 79%);
+    font-size: 2em;
+  
+}
+
+/* trending page Style */
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 1rem;
+}
+
+.card-flag-container{
+    height: 50%;
+    align-items: center;
+}
+
+.card-flag{
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-info{
+    font-family: 'Inter';
+    text-align: center;
+    padding: 1.5rem;
+    line-height: 1rem;
+    /* display: flex;
+    flex-direction: column; */
+    height:50% ;
+    
+}
+
+.card-info h2{
+    
+    margin-bottom: 1rem;
+}
+
+.card-info p{
+    margin-bottom: 0.5rem;
+}
+
+.card{
+    border-radius: 7px;
+    box-shadow: 0 4px 7px rgba(0,0,0,0.2);
+    background-color: aliceblue;
+}
+
+@media screen  and (max-width:800px){
+    .hero{
+        grid-template-columns: 1fr;
+    }
+    .articles{
+        flex-direction: column;
+        font-size: larger;
+    }  
+
+}
+
+ /* Sigin form styling */
+
+ .signin-container, .signup-container {
+    max-width: 300px;
+    margin: 30px auto;
+    padding: 10px;
+    background-color: aliceblue;
+  }
+   h1{
+    margin-bottom: 1rem;
+   }
+  .signin-container, .signup-container h1{
+      text-align: center;
+  }
+  
+  .input-name {
+    margin-bottom: 5px;
+    /* display: block; */
+  }
+  
+  .error {
+    color: red;
+    font-size: 12px;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .signin-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .signin-btn:hover {
+    background-color: #0056b3;
+  }
+
+
+  

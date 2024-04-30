@@ -1,0 +1,30 @@
+.signup-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    margin-top: 20px; /* Adjust margin as needed */
+  }
+  
+  .navbar {
+    text-align: center;
+  }
+  
+  .links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .links li {
+    display: inline-block;
+    margin-right: 20px; /* Adjust spacing between links */
+  }
+  
+  .links li:last-child {
+    margin-right: 0; /* Remove margin from the last link */
+  }
+  
+  .links a {
+    text-decoration: none;
+    color: black;
+  }
+  
