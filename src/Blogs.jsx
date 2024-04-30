@@ -11,6 +11,7 @@ const Blogs = () => {
             try {
                 const posts = await axios.get('https://entri-news-server.onrender.com/posts')
                 setPost(posts.data)
+                console.log(posts.data)
 
             } catch (error) {
                 console.log(error)
@@ -26,6 +27,8 @@ const Blogs = () => {
                 <img className="blogImage"
                 key={index}
                 src={`https://entri-news-server.onrender.com/${post.image}`}
+                alt={`Image ${index + 1}`}
+
                 />
                 <p>{post.title}</p>
                 <p>{post.subtitle}</p>

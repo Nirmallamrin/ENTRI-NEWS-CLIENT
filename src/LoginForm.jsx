@@ -21,7 +21,8 @@ const LoginForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try{
-            const response = await axios.post("https://entri-news-server.onrender.com/login",formData);
+            console.log(formData)
+            const response = await axios.post("https://entri-news-server.onrender.com/users/login",formData);
             sessionStorage.setItem('userToken',response.data.token)
             navigate('/')
             
