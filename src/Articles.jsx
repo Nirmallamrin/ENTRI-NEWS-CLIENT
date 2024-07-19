@@ -6,8 +6,8 @@ const Articles = () => {
     <section className='articles'>
         <Article
         id='01' 
-        title= 'Reviving Retro PCs' 
-        desc= 'What happens when old PCs are given modern upgrades?'
+        title = 'Reviving Retro PCs' 
+        desc = 'What happens when old PCs are given modern upgrades?'
         img = 'src/assets/images/image-retro-pcs.jpg'
         
         />
