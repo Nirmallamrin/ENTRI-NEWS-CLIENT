@@ -10,6 +10,7 @@ const Header = () => {
   return (
     <div className='signup-container'>
         <header className='navbar'>
+            <h1 className='heading'>Entri News</h1>
             <nav className='links'>
                 <ul>
                     <li className='link'>

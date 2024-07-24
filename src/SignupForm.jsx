@@ -1,9 +1,11 @@
 import React, {useState} from 'react';
 import axios from 'axios'
 import './SignupForm.css'
+import { useNavigate } from 'react-router-dom';
 
 
 const SignupForm = () => {
+    const navigate = useNavigate()
     const [formData, setFormData] = useState({
         name:'',
         username:'',
@@ -21,6 +23,7 @@ const SignupForm = () => {
         try{
             const response = await axios.post("https://entri-news-server.onrender.com/users",formData);
             console.log(response.data)
+            navigate("/")
         }catch(error){
             console.error(error)
         }
